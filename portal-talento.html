@@ -122,15 +122,11 @@ section.block{padding-block:28px 48px}
 .checks{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px}
 .checks li{display:flex;gap:10px;color:var(--ink-2);font-size:14.5px}
 .checks svg{flex:none;margin-top:3px;color:var(--blue)}
-.benefits,.team{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
-@media (max-width:760px){.benefits,.team{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.benefits{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+@media (max-width:760px){.benefits{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .benefit{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:8px}
 .benefit b{font-size:14px}
 .benefit span{font-size:13px;color:var(--ink-3)}
-.member{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px 12px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:8px}
-.member .avatar{width:56px;height:56px;font-size:17px}
-.member b{font-size:14px}
-.member span{font-size:12.5px;color:var(--ink-3);margin-top:-6px}
 .aside{position:sticky;top:calc(env(safe-area-inset-top,0px) + 86px);align-self:start}
 @media (max-width:900px){.aside{position:static}}
 .summary{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px;display:flex;flex-direction:column;gap:12px}
@@ -296,42 +292,39 @@ const JOBS=[
   about:'Buscamos un/a Desarrollador/a Full Stack con pasión por la tecnología y experiencia en el desarrollo de aplicaciones web escalables y de alto rendimiento. Formarás parte de la célula de Canales Digitales, que construye la plataforma de autoservicio usada por más de 400 mil clientes.',
   resp:['Desarrollar nuevas funcionalidades en frontend y backend.','Colaborar con el equipo de producto y diseño.','Optimizar aplicaciones para máxima velocidad y escalabilidad.','Participar en revisiones de código y buenas prácticas.'],
   req:['3+ años de experiencia en desarrollo web.','React, Node.js, TypeScript, SQL.','Conocimiento en APIs REST y Git.','Inglés intermedio (deseable).'],
-  team:[['Ana García','Tech Lead'],['Carlos León','Backend Developer'],['María López','UX Designer'],['Diego Morales','DevOps Engineer']]},
+  },
  {id:'data',title:'Analista de Datos',area:'Tecnología',icon:'chart',loc:'Lima, Perú',mode:'Híbrido',type:'Tiempo completo',level:'Junior',salary:'S/ 4,800 – 6,000',posted:4,isNew:true,
   short:'Únete a nuestro equipo de datos y ayúdanos a tomar decisiones basadas en información.',
   about:'Transformarás datos operativos y comerciales en tableros e indicadores que guían decisiones de negocio. Trabajarás junto a las áreas de Finanzas y Marketing con un stack moderno en la nube.',
   resp:['Construir y mantener tableros en Power BI.','Modelar y limpiar datos con SQL y Python.','Definir KPIs junto a las áreas usuarias.','Documentar fuentes y reglas de negocio.'],
   req:['1+ año en análisis de datos.','SQL intermedio y Power BI o Tableau.','Python o R (deseable).','Pensamiento analítico y comunicación clara.'],
-  team:[['Lucía Paredes','Data Lead'],['Jorge Ríos','Data Engineer'],['Valeria Soto','BI Analyst'],['Renzo Chávez','Data Scientist']]},
+  },
  {id:'marketing',title:'Especialista en Marketing Digital',area:'Marketing',icon:'mega',loc:'Lima, Perú',mode:'Remoto',type:'Tiempo completo',level:'Semi Senior',salary:'S/ 5,500 – 7,000',posted:6,
   short:'Buscamos a alguien creativo, analítico y apasionado por generar impacto digital.',
   about:'Liderarás campañas de adquisición y retención en canales pagados y orgánicos, con foco en medir resultados y optimizar el costo por adquisición.',
   resp:['Planificar y ejecutar campañas en Meta y Google Ads.','Analizar el desempeño y proponer mejoras.','Coordinar contenidos con el equipo creativo.','Gestionar el presupuesto mensual de medios.'],
   req:['2+ años en marketing digital.','Manejo de Google Analytics 4 y Ads.','Experiencia con automatización de correos.','Orientación a resultados.'],
-  team:[['Paola Ruiz','Head of Growth'],['Martín Vega','Content Lead'],['Sofía Rojas','Diseñadora'],['Andrés Salas','SEO Specialist']]},
+  },
  {id:'pm',title:'Product Manager',area:'Producto',icon:'box',loc:'Lima, Perú',mode:'Híbrido',type:'Tiempo completo',level:'Senior',salary:'S/ 10,000 – 13,000',posted:9,
   short:'Lidera el ciclo de vida de nuestros productos digitales y trabaja con equipos multidisciplinarios.',
   about:'Serás responsable de la visión y el roadmap de la app móvil, priorizando con datos y en contacto permanente con usuarios.',
   resp:['Definir visión, roadmap y métricas del producto.','Priorizar el backlog con el equipo de desarrollo.','Realizar discovery con usuarios.','Comunicar avances a stakeholders.'],
   req:['4+ años como PM o PO en producto digital.','Experiencia con metodologías ágiles.','Dominio de herramientas de analítica de producto.','Inglés avanzado.'],
-  team:[['Ana García','Tech Lead'],['Elena Quispe','UX Researcher'],['Hugo Torres','Engineering Manager'],['María López','UX Designer']]},
+  },
  {id:'ux',title:'Diseñador/a UX/UI',area:'Diseño',icon:'pen',loc:'Lima, Perú',mode:'Híbrido',type:'Tiempo completo',level:'Semi Senior',salary:'S/ 6,000 – 7,800',posted:12,
   short:'Diseña experiencias que enamoran y resuelven problemas reales de nuestros usuarios.',
   about:'Diseñarás flujos y pantallas para web y móvil, y contribuirás a la evolución de nuestro sistema de diseño.',
   resp:['Diseñar flujos, wireframes y prototipos en Figma.','Validar soluciones con pruebas de usabilidad.','Mantener y extender el sistema de diseño.','Trabajar junto a desarrollo durante la implementación.'],
   req:['2+ años en diseño UX/UI.','Portafolio con casos de producto digital.','Dominio de Figma.','Nociones de accesibilidad web.'],
-  team:[['María López','UX Designer'],['Elena Quispe','UX Researcher'],['Sofía Rojas','Diseñadora'],['Ana García','Tech Lead']]},
+  },
  {id:'ventas',title:'Ejecutivo/a de Ventas',area:'Comercial',icon:'hand',loc:'Arequipa, Perú',mode:'Presencial',type:'Tiempo completo',level:'Junior',salary:'S/ 3,200 + comisiones',posted:15,
   short:'Únete a nuestro equipo comercial y sé parte de nuestro crecimiento en el sur del país.',
   about:'Gestionarás una cartera de clientes empresariales en Arequipa y abrirás nuevas cuentas en la región sur.',
   resp:['Prospectar y visitar clientes empresariales.','Elaborar propuestas y cotizaciones.','Cumplir metas mensuales de venta.','Registrar oportunidades en el CRM.'],
   req:['1+ año en ventas B2B.','Manejo de CRM (deseable Salesforce).','Licencia de conducir A-I.','Excelente comunicación y negociación.'],
-  team:[['Rodrigo Mendoza','Jefe Comercial Sur'],['Carla Núñez','Ejecutiva Senior'],['Luis Flores','Key Account'],['Patricia Vera','Asistente Comercial']]},
+  },
 ];
 const BENEFITS=[['home','Trabajo híbrido','Flexibilidad que se adapta a ti'],['heart','Seguro de salud','EPS al 100% para ti y tu familia'],['book','Capacitación continua','Presupuesto anual para cursos'],['cal','Días libres adicionales','Tu cumpleaños y 3 días extra al año']];
-const AV_COLORS=['#1D5FD6','#0E3E94','#2E86DE','#16507F','#3A6FCF','#0B6E99'];
-const initials=n=>n.split(' ').map(w=>w[0]).slice(0,2).join('');
-const avColor=n=>AV_COLORS[[...n].reduce((a,c)=>a+c.charCodeAt(0),0)%AV_COLORS.length];
 const GENERAL={id:'general',title:'Postulación general',area:'Banco de talento',icon:'mail',loc:'Perú',mode:'Cualquier modalidad'};
 const state={view:'list',job:null,q:'',area:'',loc:'',mode:'',step:1,form:{},files:{cv:null,extra:null},ref:''};
 const app=document.getElementById('app');
@@ -416,8 +409,6 @@ function renderDetail(){
         <div><h4>Requisitos</h4><ul class="checks">${j.req.map(r=>`<li>${ic('check',16)}${esc(r)}</li>`).join('')}</ul></div>
       </div>
       <div><h2>Beneficios</h2><div class="benefits">${BENEFITS.map(([i,t,d])=>`<div class="benefit"><div class="ico">${ic(i)}</div><b>${t}</b><span>${d}</span></div>`).join('')}</div></div>
-      <div><h2>Conoce a tu futuro equipo</h2><p style="margin:-4px 0 14px">Trabajarás con personas increíbles que comparten tu pasión por lo que hacen.</p>
-        <div class="team">${j.team.map(([n,r])=>`<div class="member"><div class="avatar" style="background:${avColor(n)}">${initials(n)}</div><b>${esc(n)}</b><span>${esc(r)}</span></div>`).join('')}</div></div>
     </div>
     <aside class="aside">
       <div class="summary">
